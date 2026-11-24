@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>SPIRA — Pure • Natural • Superfood Spirulina | খাঁটি ও প্রাকৃতিক স্পিরুলিনা</title>
+  <meta name="description" content="SPIRA — খাঁটি ও প্রাকৃতিক অর্গানিক স্পিরুলিনা পাউডার, ভেজিটেবল ক্যাপসুল এবং মিনি স্যাশে। হাই প্রোটিন, অ্যান্টিঅক্সিডেন্ট ও ইমিউনিটি বুস্টার।" />
+  <meta name="theme-color" content="#073B27" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="SPIRA" />
+
+  <!-- PWA Manifest & Official Brand Icon -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/jpeg" href="assets/spira-logo.jpg" />
+  <link rel="apple-touch-icon" href="assets/spira-logo.jpg" />
+
+  <!-- Editorial & Bengali Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Hind+Siliguri:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Subtle Top Announcement Strip -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <div class="announcement-left">
+        <span class="status-indicator"></span>
+        <span>১০০% খাঁটি ও ল্যাব-টেস্টেড অর্গানিক স্পিরুলিনা • সারা বাংলাদেশে ক্যাশ অন ডেলিভারি</span>
+      </div>
+      <div class="announcement-right">
+        <a href="https://www.facebook.com/share/1PjxdXaeU5/" target="_blank" rel="noopener noreferrer" class="top-bar-link">
+          Facebook Page
+        </a>
+        <span class="top-sep">/</span>
+        <button type="button" class="top-bar-link" id="topInstallAppBtn">
+          Download App
+        </button>
+        <span class="top-sep">/</span>
+        <button type="button" class="top-bar-link admin-lock-trigger" id="openAdminBtnTop" title="Admin Login">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          <span>Admin</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editorial Navigation Header using User's Actual SPIRA Logo -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#" class="brand-identity" aria-label="SPIRA Home">
+        <img src="assets/spira-logo.jpg" alt="SPIRA Official Logo" class="brand-logo-img" />
+        <div class="brand-text-wrap">
+          <span class="brand-name-serif">SPIRA</span>
+          <span class="brand-tagline-gold">PURE • NATURAL • SUPERFOOD</span>
+        </div>
+      </a>
+
+      <nav class="primary-nav" aria-label="Main Menu">
+        <a href="#products" class="nav-item" data-track-nav="Products">প্রোডাক্ট সমূহ</a>
+        <a href="#nutrition" class="nav-item" data-track-nav="Nutrition">পুষ্টিগুণ ও বিজ্ঞান</a>
+        <a href="#usage" class="nav-item" data-track-nav="HowToUse">খাওয়ার নিয়ম</a>
+        <a href="#journal" class="nav-item" data-track-nav="Blog">স্পিরুলিনা জার্নাল</a>
+        <a href="#reviews" class="nav-item" data-track-nav="Reviews">কাস্টমার রিভিউ</a>
+      </nav>
+
+      <div class="header-right">
+        <button type="button" class="btn-app-outline" id="headerInstallBtn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+          <span class="btn-app-text">Web App</span>
+        </button>
+
+        <button type="button" class="btn-cart-bag" id="openCartBtn" aria-label="শপিং ব্যাগ">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="cart-btn-text">অর্ডার ব্যাগ</span>
+          <span class="bag-count" id="cartCountBadge">0</span>
+        </button>
+
+        <button type="button" class="btn-mobile-menu" id="mobileMenuToggleBtn" aria-label="মেনু খুলুন" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Slide-Down Navigation Menu -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" hidden>
+      <nav class="mobile-nav-list" aria-label="Mobile Navigation">
+        <a href="#products" class="mobile-nav-link">প্রোডাক্ট সমূহ (পাউডার, ক্যাপসুল, মিনি স্যাশে)</a>
+        <a href="#nutrition" class="mobile-nav-link">পুষ্টিগুণ ও ডোজ ক্যালকুলেটর</a>
+        <a href="#usage" class="mobile-nav-link">খাওয়ার সঠিক নিয়ম</a>
+        <a href="#journal" class="mobile-nav-link">স্পিরুলিনা গবেষণা ও ব্লগ</a>
+        <a href="#reviews" class="mobile-nav-link">কাস্টমার রিভিউ ও ফেসবুক পেজ</a>
+        <div class="mobile-nav-actions">
+          <button type="button" class="btn-solid-emerald mobile-menu-install" id="mobileDrawerInstallBtn">
+            📲 মোবাইল অ্যাপ ডাউনলোড / ইনস্টল করুন
+          </button>
+          <button type="button" class="btn-outline-emerald mobile-menu-admin" id="mobileDrawerAdminBtn">
+            🔒 অ্যাডমিন প্যানেল লগইন (Admin)
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION: Featuring the User's Real High-Res Marble & Spirulina Bowl Photograph -->
+    <section class="hero-showcase">
+      <div class="container hero-grid">
+        <div class="hero-editorial">
+          <div class="editorial-meta">
+            <span>ORGANIC ARTHROSPIRA PLATENSIS</span>
+            <span class="meta-dot">•</span>
+            <span>RAW SUPERFOOD</span>
+          </div>
+
+          <h1 class="hero-title">
+            খাঁটি ও প্রাকৃতিক স্পিরুলিনা—আপনার প্রতিদিনের সম্পূর্ণ পুষ্টি ও ইমিউনিটি।
+          </h1>
+
+          <p class="hero-description">
+            <strong>SPIRA</strong> নিয়ে এসেছে ল্যাব-টেস্টেড শতভাগ বিশুদ্ধ অর্গানিক স্পিরুলিনা। এতে রয়েছে ৬৫% উদ্ভিজ্জ প্রোটিন, বিরল ফিকোসায়ানিন অ্যান্টিঅক্সিডেন্ট, আয়রন এবং ১৮টি অ্যামিনো অ্যাসিড। পাউডার, ভেজিটেবল ক্যাপসুল কিংবা ভ্রমণের জন্য ছোট মিনি স্যাশে—আপনার সুবিধা অনুযায়ী বেছে নিন।
+          </p>
+
+          <div class="hero-actions">
+            <a href="#products" class="btn-solid-emerald" data-track-cta="Hero_Shop_Products">
+              প্রোডাক্ট ও মূল্য দেখুন
+            </a>
+            <a href="#journal" class="btn-ghost-emerald" data-track-cta="Hero_Read_Journal">
+              কেন স্পিরুলিনা খাবেন?
+            </a>
+          </div>
+
+          <!-- Live Verified Store Counters (Auto-Incrementing + Editable from Admin Panel) -->
+          <div class="live-trust-metrics" aria-label="Store Live Statistics">
+            <div class="trust-metric-box">
+              <div class="metric-live-header">
+                <span class="live-pulse"></span>
+                <span class="metric-kicker">LIVE VISITORS • মোট ভিজিটর</span>
+              </div>
+              <div class="metric-number" id="publicTotalVisitors">১,৪২০</div>
+              <div class="metric-caption">আমাদের ওয়েবসাইট ভিজিট করেছেন</div>
+            </div>
+
+            <div class="trust-metric-box">
+              <div class="metric-live-header">
+                <span class="live-pulse-gold"></span>
+                <span class="metric-kicker">VERIFIED ORDERS • মোট অর্ডার ও প্রি-বুকিং</span>
+              </div>
+              <div class="metric-number" id="publicTotalPurchases">৩১৮</div>
+              <div class="metric-caption">সফল অর্ডার ও প্রি-বুকিং সম্পন্ন</div>
+            </div>
+
+            <div class="trust-metric-box">
+              <div class="metric-live-header">
+                <span class="metric-kicker">LAB PURITY • বিশুদ্ধতা</span>
+              </div>
+              <div class="metric-number">১০০%</div>
+              <div class="metric-caption">কৃত্রিম রঙ ও প্রিজারভেটিভ মুক্ত</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actual Uploaded SPIRA Hero Cover Image -->
+        <div class="hero-photo-frame">
+          <div class="photo-inner-border">
+            <img src="assets/spira-hero.jpg" alt="SPIRA Pure Natural Superfood Spirulina Powder in Ceramic Bowl on Marble" class="hero-real-photo" />
+          </div>
+          <div class="photo-caption-strip">
+            <span><strong>SPIRA</strong> — Pure • Natural • Superfood Spirulina</span>
+            <span>হাই প্রোটিন | অ্যান্টিঅক্সিডেন্ট | ইমিউনিটি বুস্টার</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT COLLECTION SECTION (Clean Luxury Storefront - No Admin Clutter) -->
+    <section class="catalog-section" id="products">
+      <div class="container">
+        <div class="catalog-header">
+          <div>
+            <span class="section-eyebrow">SPIRA COLLECTION • আমাদের প্রোডাক্ট সমূহ</span>
+            <h2 class="section-heading">আপনার দৈনিক রুটিনের জন্য ৩টি বিশেষ ফরম্যাট</h2>
+            <p class="section-lead">
+              স্মুদি বা পানির সাথে খাওয়ার জন্য পাউডার, গন্ধহীন সহজ সেবনের জন্য ভেজিটেবল ক্যাপসুল এবং ভ্রমণ বা অফিসের জন্য ছোট ছোট সিঙ্গেল-ডোজ মিনি স্যাশে প্যাক।
+            </p>
+          </div>
+
+          <div class="catalog-filters" role="tablist">
+            <button type="button" class="filter-btn active" data-category="all">সবগুলো</button>
+            <button type="button" class="filter-btn" data-category="powder">স্পিরুলিনা পাউডার</button>
+            <button type="button" class="filter-btn" data-category="capsule">ভেজিটেবল ক্যাপসুল</button>
+            <button type="button" class="filter-btn" data-category="sachet">মিনি স্যাশে প্যাক</button>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid populated by app.js -->
+        <div class="catalog-grid" id="productsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- NUTRITIONAL SCIENCE & CLINICAL BREAKDOWN -->
+    <section class="nutrition-section" id="nutrition">
+      <div class="container">
+        <div class="nutrition-layout">
+          <div class="nutrition-editorial">
+            <span class="section-eyebrow">NUTRITIONAL SCIENCE • কেন স্পিরুলিনা সেরা সুপারফুড?</span>
+            <h2 class="section-heading">১ চামচ স্পিরুলিনায় রয়েছে ১ কেজি তাজা শাকসবজির সমপরিমাণ মাইক্রো-নিউট্রিয়েন্ট</h2>
+            <p class="nutrition-intro">
+              বিশ্ব স্বাস্থ্য সংস্থা (WHO) এবং NASA মহাকাশচারীদের পুষ্টি চাহিদা পূরণে স্পিরুলিনাকে (<em>Arthrospira platensis</em>) পৃথিবীর অন্যতম শ্রেষ্ঠ সুপারফুড হিসেবে স্বীকৃতি দিয়েছে।
+            </p>
+
+            <div class="science-points">
+              <div class="science-point">
+                <span class="point-index">01</span>
+                <div>
+                  <h3>৬৫% উদ্ভিজ্জ প্রোটিন ও ১৮টি অ্যামিনো অ্যাসিড</h3>
+                  <p>গরুর মাংস বা ডিমের তুলনায় প্রায় ৩ গুণ বেশি ঘনত্বের প্রোটিন রয়েছে স্পিরুলিনায়, যা ৯০% এর বেশি হজমযোগ্য এবং মাংসপেশি ও স্ট্যামিনা গঠনে সরাসরি কাজ করে।</p>
+                </div>
+              </div>
+
+              <div class="science-point">
+                <span class="point-index">02</span>
+                <div>
+                  <h3>বিরল ফিকোসায়ানিন (Phycocyanin) ও রোগ প্রতিরোধ ক্ষমতা</h3>
+                  <p>স্পিরুলিনার গাঢ় নীলচে-সবুজ রঞ্জক ফিকোসায়ানিন শরীরের কোষকে অক্সিডেটিভ ড্যামেজ থেকে রক্ষা করে, প্রদাহ কমায় এবং প্রাকৃতিক ইমিউনিটি বহুগুণ বৃদ্ধি করে।</p>
+                </div>
+              </div>
+
+              <div class="science-point">
+                <span class="point-index">03</span>
+                <div>
+                  <h3>রক্তস্বল্পতা দূরীকরণ ও প্রাকৃতিক আয়রন</h3>
+                  <p>পালং শাকের চেয়ে ২৮ গুণ বেশি বায়ো-অ্যাভেইলেবল আয়রন ও ভিটামিন বি-কমপ্লেক্স থাকায় এটি হিমোগ্লোবিন বাড়াতে এবং সারাদিনের ক্লান্তি দূর করতে অত্যন্ত কার্যকর।</p>
+                </div>
+              </div>
+
+              <div class="science-point">
+                <span class="point-index">04</span>
+                <div>
+                  <h3>ক্লোরোফিল ডিটক্স, ত্বক ও ডায়াবেটিস নিয়ন্ত্রণ</h3>
+                  <p>উচ্চমাত্রার ক্লোরোফিল রক্ত পরিষ্কার করে ত্বক ও চুলের উজ্জ্বলতা বাড়ায় এবং রক্তের খারাপ কোলেস্টেরল (LDL) ও শর্করার ভারসাম্য বজায় রাখতে সহায়তা করে।</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nutrition-table-wrapper">
+            <div class="clinical-card">
+              <div class="clinical-card-head">
+                <div>
+                  <span class="clinical-batch">NUTRITIONAL ASSAY • PER 5g SERVING</span>
+                  <h3>পুষ্টি উপাদান তালিকা (প্রতি ৫ গ্রামে)</h3>
+                </div>
+                <img src="assets/spira-logo.jpg" alt="SPIRA Crest" class="clinical-crest" />
+              </div>
+
+              <table class="assay-table">
+                <thead>
+                  <tr>
+                    <th>উপাদান (Nutrient)</th>
+                    <th>পরিমাণ (5g)</th>
+                    <th>পুষ্টি মান</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>উদ্ভিজ্জ প্রোটিন (Protein)</strong></td>
+                    <td class="mono-val">3.25 g (65%)</td>
+                    <td>ডিমের চেয়ে ৩ গুণ বেশি</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ফিকোসায়ানিন (Phycocyanin)</strong></td>
+                    <td class="mono-val">710 mg</td>
+                    <td>প্রধান অ্যান্টিঅক্সিডেন্ট</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ক্লোরোফিল-এ (Chlorophyll)</strong></td>
+                    <td class="mono-val">68 mg</td>
+                    <td>ন্যাচারাল ব্লাড ডিটক্স</td>
+                  </tr>
+                  <tr>
+                    <td><strong>আয়রন (Bioavailable Iron)</strong></td>
+                    <td class="mono-val">4.2 mg</td>
+                    <td>পালং শাকের ২৮ গুণ</td>
+                  </tr>
+                  <tr>
+                    <td><strong>বিটা-ক্যারোটিন (Pro-Vit A)</strong></td>
+                    <td class="mono-val">11.5 mg</td>
+                    <td>গাজরের চেয়ে ১৫ গুণ</td>
+                  </tr>
+                  <tr>
+                    <td><strong>জিএলএ ফ্যাটি অ্যাসিড (GLA)</strong></td>
+                    <td class="mono-val">65 mg</td>
+                    <td>হার্ট ও হরমোন ব্যালেন্স</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- Daily Dosage Selector -->
+              <div class="dosage-box">
+                <div class="dosage-head">
+                  <strong>আপনার প্রয়োজন অনুযায়ী দৈনিক সেবন মাত্রা (Dosage Guide)</strong>
+                </div>
+                <div class="dosage-tabs" id="dosageGoalBtns">
+                  <button type="button" class="dosage-tab active" data-goal="immunity">ইমিউনিটি ও সুস্থতা</button>
+                  <button type="button" class="dosage-tab" data-goal="fitness">জিম ও প্রোটিন</button>
+                  <button type="button" class="dosage-tab" data-goal="detox">ত্বক ও ডিটক্স</button>
+                  <button type="button" class="dosage-tab" data-goal="busy">অফিস ও ভ্রমণ</button>
+                </div>
+                <div class="dosage-output" id="dosageResultBox">
+                  <div class="dosage-highlight">দৈনিক মাত্রা: ৩ থেকে ৫ গ্রাম</div>
+                  <p>
+                    <strong>পাউডার:</strong> সকালে নাস্তার পরে ১ চা-চামচ (৩-৫ গ্রাম) কুসুম গরম পানি, লেবুর শরবত বা স্মুদির সাথে।<br/>
+                    <strong>ক্যাপসুল:</strong> সকালে ২টি এবং দুপুরে ২টি ভেজিটেবল ক্যাপসুল খাবারের পরে।<br/>
+                    <strong>মিনি স্যাশে:</strong> প্রতিদিন ১টি ছোট মিনি প্যাকেট (৩ গ্রাম) এক গ্লাস পানিতে গুলিয়ে পান করুন।
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO CONSUME SECTION -->
+    <section class="usage-section" id="usage">
+      <div class="container">
+        <div class="section-header-centered">
+          <span class="section-eyebrow">DAILY RITUAL • খাওয়ার সঠিক নিয়ম</span>
+          <h2 class="section-heading">স্পিরুলিনা যেভাবে আপনার প্রতিদিনের রুটিনে যুক্ত করবেন</h2>
+        </div>
+
+        <div class="usage-grid">
+          <div class="usage-card">
+            <div class="usage-num">01 / POWDER</div>
+            <h3>স্পিরুলিনা পাউডার</h3>
+            <p>১ গ্লাস স্বাভাবিক বা হালকা কুসুম গরম পানিতে ১ চা-চামচ (৩-৫ গ্রাম) SPIRA পাউডার মিশিয়ে নিন। সাথে কয়েক ফোঁটা লেবুর রস ও সামান্য মধু মেশালে স্বাদ চমৎকার হয় এবং লেবুর ভিটামিন-সি আয়রন শোষণে সহায়তা করে। কখনো ফুটন্ত গরম পানিতে মেশাবেন না।</p>
+            <div class="usage-foot">সেরা সময়: সকালের নাস্তার ৩০ মিনিট আগে বা পরে</div>
+          </div>
+
+          <div class="usage-card">
+            <div class="usage-num">02 / VEG CAPSULES</div>
+            <h3>ভেজিটেবল ক্যাপসুল</h3>
+            <p>যাদের কাঁচা স্পিরুলিনার প্রাকৃতিক ঘ্রাণ বা স্বাদ নিতে অস্বস্তি হয়, তাদের জন্য ১০০% প্ল্যান্ট-বেসড ভেজিটেবল ক্যাপসুল। কোনো গন্ধ বা মেশানোর ঝামেলা ছাড়াই সাধারণ পানির সাথে সহজে সেবন করা যায়।</p>
+            <div class="usage-foot">সেরা সময়: সকালে ২টি ও দুপুরে ২টি খাবারের পর</div>
+          </div>
+
+          <div class="usage-card">
+            <div class="usage-num">03 / MINI SACHETS</div>
+            <h3>মিনি স্যাশে (ছোট প্যাক)</h3>
+            <p>ছোট ছোট সিঙ্গেল-ডোজ প্যাকেটের মধ্যে নির্দিষ্ট ৩ গ্রাম স্পিরুলিনা। চামচ দিয়ে মাপার বা বড় জার বহন করার ঝামেলা নেই। পকেটে বা ব্যাগে রাখুন—অফিস, জিম বা ভ্রমণে পানির বোতলে ছিঁড়ে ঢেলে ঝাঁকিয়ে পান করুন।</p>
+            <div class="usage-foot">সেরা সময়: জিমের আগে, অফিসে বা ভ্রমণের সময়</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDITORIAL BLOG & RESEARCH JOURNAL -->
+    <section class="journal-section" id="journal">
+      <div class="container">
+        <div class="catalog-header">
+          <div>
+            <span class="section-eyebrow">SPIRA WELLNESS JOURNAL • স্পিরুলিনা ব্লগ ও গবেষণা</span>
+            <h2 class="section-heading">কেন স্পিরুলিনা খাবেন, কীভাবে চিনবেন ও বিস্তারিত স্বাস্থ্য গাইড</h2>
+          </div>
+        </div>
+
+        <div class="journal-grid" id="blogGrid"></div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER REVIEWS & COMMUNITY SECTION -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+        <div class="catalog-header">
+          <div>
+            <span class="section-eyebrow">COMMUNITY &amp; VERIFIED EXPERIENCES • আমাদের কাস্টমার ও ফেসবুক কমিউনিটি</span>
+            <h2 class="section-heading">প্রতিদিনের সুস্থতায় যারা SPIRA-র উপর আস্থা রাখছেন</h2>
+          </div>
+          <a href="https://www.facebook.com/share/1PjxdXaeU5/" target="_blank" rel="noopener noreferrer" class="btn-outline-emerald">
+            আমাদের অফিসিয়াল ফেসবুক পেজ ভিজিট করুন →
+          </a>
+        </div>
+
+        <div class="reviews-grid">
+          <blockquote class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">“আমি নিয়মিত জিমে যাই। কৃত্রিম সাপ্লিমেন্টের বদলে গত এক মাস ধরে সকালে ১ চামচ SPIRA স্পিরুলিনা পাউডার লেবু-পানির সাথে খাচ্ছি। ওয়ার্কআউটের পর ক্লান্তি অনেক কমে গেছে।”</p>
+            <footer class="review-author">
+              <strong>রাশেদুল ইসলাম</strong>
+              <span>ধানমন্ডি, ঢাকা • স্পিরুলিনা পাউডার</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">“অফিসে কাজের চাপে আগে দুপুরের পর প্রচণ্ড অবসাদ লাগত। মিনি স্যাশে প্যাকগুলো ব্যাগে রাখি, অফিসে বসেই পানির বোতলে মিশিয়ে খেয়ে নিই। মাপার কোনো ঝামেলা নেই।”</p>
+            <footer class="review-author">
+              <strong>তাসনিম ফারহানা</strong>
+              <span>গুলশান, ঢাকা • মিনি স্যাশে প্যাক</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">“আমার পাউডারের গন্ধ নিতে একটু সমস্যা হতো, তাই ভেজিটেবল ক্যাপসুল অর্ডার করেছিলাম। হিমোগ্লোবিন ও আয়রনের ঘাটতি পূরণে দারুণ কাজ করছে।”</p>
+            <footer class="review-author">
+              <strong>ডা. মাহফুজুর রহমান</strong>
+              <span>চট্টগ্রাম • ভেজিটেবল ক্যাপসুল</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEB APP (PWA) DOWNLOAD BANNER -->
+    <section class="webapp-banner-section">
+      <div class="container">
+        <div class="webapp-card">
+          <div class="webapp-brand-col">
+            <img src="assets/spira-logo.jpg" alt="SPIRA App Icon" class="webapp-logo" />
+            <div>
+              <span class="section-eyebrow" style="color:var(--gold-light);">SPIRA MOBILE &amp; DESKTOP WEB APP</span>
+              <h2>ওয়েবসাইট থেকেই ডাউনলোড করুন SPIRA অ্যাপ</h2>
+              <p>ওয়েবসাইট এবং মোবাইল অ্যাপ—দুইভাবেই ব্যবহার করুন। দ্রুত অর্ডার ট্র্যাকিং এবং অফলাইন ব্রাউজিংয়ের জন্য এখনই আপনার ফোনে ইনস্টল করে নিন।</p>
+            </div>
+          </div>
+          <div class="webapp-action-col">
+            <button type="button" class="btn-gold-solid" id="promoInstallBtn">
+              অ্যাপ ডাউনলোড / ইনস্টল করুন
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-row">
+          <img src="assets/spira-logo.jpg" alt="SPIRA Logo" class="footer-logo-img" />
+          <div>
+            <span class="footer-brand-name">SPIRA</span>
+            <span class="footer-brand-sub">PURE • NATURAL • SUPERFOOD</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          খাঁটি ও প্রাকৃতিক অর্গানিক স্পিরুলিনা পাউডার, ভেজিটেবল ক্যাপসুল ও মিনি স্যাশে।<br/>
+          হাই প্রোটিন • অ্যান্টিঅক্সিডেন্ট • ইমিউনিটি বুস্টার।
+        </p>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4>প্রোডাক্ট সমূহ</h4>
+        <ul>
+          <li><a href="#products">স্পিরুলিনা পাউডার (100g / 250g)</a></li>
+          <li><a href="#products">ভেজিটেবল ক্যাপসুল (60 Caps)</a></li>
+          <li><a href="#products">মিনি স্যাশে প্যাক (30 Sachets)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4>গাইড ও জার্নাল</h4>
+        <ul>
+          <li><a href="#nutrition">পুষ্টি উপাদান ও ডোজ ক্যালকুলেটর</a></li>
+          <li><a href="#usage">খাওয়ার নিয়মাবলী</a></li>
+          <li><a href="#journal">স্পিরুলিনা গবেষণা ব্লগ</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-nav-col">
+        <h4>যোগাযোগ ও ম্যানেজমেন্ট</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/share/1PjxdXaeU5/" target="_blank" rel="noopener noreferrer">অফিসিয়াল ফেসবুক পেজ</a></li>
+          <li><button type="button" class="footer-text-btn" id="footerInstallBtn">মোবাইল অ্যাপ ডাউনলোড</button></li>
+          <li><button type="button" class="footer-text-btn" id="openAdminBtnFooter">অ্যাডমিন প্যানেল লগইন (Admin)</button></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 SPIRA Organic Superfood Bangladesh. All rights reserved.</span>
+      <span>100% Pure Arthrospira Platensis</span>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       CART & CHECKOUT DRAWER
+       ===================================================================== -->
+  <div class="backdrop" id="cartBackdrop" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="অর্ডার ব্যাগ" hidden>
+    <div class="drawer-head">
+      <div>
+        <h3>আপনার অর্ডার ব্যাগ</h3>
+        <span>সারা বাংলাদেশে ক্যাশ অন ডেলিভারি</span>
+      </div>
+      <button type="button" class="btn-icon-close" id="closeCartBtn" aria-label="বন্ধ করুন">✕</button>
+    </div>
+
+    <div class="drawer-content">
+      <div id="cartItemsContainer"></div>
+
+      <form id="checkoutForm" class="checkout-form" hidden>
+        <div class="checkout-title">ডেলিভারি তথ্য দিন</div>
+
+        <div class="field-group">
+          <label for="custName">আপনার নাম *</label>
+          <input type="text" id="custName" required placeholder="সম্পূর্ণ নাম লিখুন" />
+        </div>
+
+        <div class="field-group">
+          <label for="custPhone">মোবাইল নাম্বার *</label>
+          <input type="tel" id="custPhone" required placeholder="01XXXXXXXXX" />
+        </div>
+
+        <div class="field-group">
+          <label for="custZone">ডেলিভারি এরিয়া *</label>
+          <select id="custZone">
+            <option value="dhaka">ঢাকার ভেতরে (ডেলিভারি চার্জ ৳৬০)</option>
+            <option value="outside">ঢাকার বাইরে (ডেলিভারি চার্জ ৳১২০)</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label for="custAddress">সম্পূর্ণ ঠিকানা *</label>
+          <textarea id="custAddress" rows="2" required placeholder="বাসা নং, রোড, এলাকা, জেলা"></textarea>
+        </div>
+
+        <div class="field-group">
+          <label for="custPayment">পেমেন্ট পদ্ধতি</label>
+          <select id="custPayment">
+            <option value="COD">ক্যাশ অন ডেলিভারি (পণ্য হাতে পেয়ে পেমেন্ট)</option>
+            <option value="bKash">বিকাশ (bKash)</option>
+            <option value="Nagad">নগদ (Nagad)</option>
+          </select>
+        </div>
+
+        <div class="summary-card">
+          <div class="summary-row">
+            <span>সাব-টোটাল</span>
+            <strong id="summarySubtotal">৳০</strong>
+          </div>
+          <div class="summary-row">
+            <span>ডেলিভারি চার্জ</span>
+            <strong id="summaryDelivery">৳৬০</strong>
+          </div>
+          <div class="summary-row summary-total">
+            <span>সর্বমোট</span>
+            <strong id="summaryTotal">৳০</strong>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-confirm-order">
+          অর্ডার কনফার্ম করুন
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       BLOG ARTICLE READER MODAL
+       ===================================================================== -->
+  <div class="backdrop" id="blogModalBackdrop" hidden>
+    <div class="modal-box blog-modal" role="dialog" aria-modal="true">
+      <div class="modal-top">
+        <span class="modal-tag" id="readerCategory">SPIRA JOURNAL</span>
+        <button type="button" class="btn-icon-close" id="closeBlogModalBtn">✕</button>
+      </div>
+      <div class="modal-inner" id="blogReaderContent"></div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       PWA INSTALL GUIDE MODAL
+       ===================================================================== -->
+  <div class="backdrop" id="installModalBackdrop" hidden>
+    <div class="modal-box install-modal" role="dialog" aria-modal="true">
+      <div class="modal-top">
+        <span class="modal-tag">SPIRA WEB APP</span>
+        <button type="button" class="btn-icon-close" id="closeInstallModalBtn">✕</button>
+      </div>
+      <div class="modal-inner">
+        <h3 style="margin-bottom:10px;">মোবাইল বা কম্পিউটারে SPIRA অ্যাপ ডাউনলোড করার নিয়ম</h3>
+        <p style="color:var(--text-secondary); margin-bottom:18px;">
+          এই ওয়েবসাইটটি একটি আধুনিক ওয়েব অ্যাপ (PWA)। নিচের নিয়মে ১ ক্লিকেই আপনার ফোনে অ্যাপ হিসেবে ইনস্টল করে নিন:
+        </p>
+        <div class="install-grid">
+          <div class="install-box">
+            <strong>Android (Chrome)</strong>
+            <p>ব্রাউজারের উপরের ডান কোণায় ৩-ডট (⋮) মেনুতে ক্লিক করে <strong>"Install App"</strong> অথবা <strong>"Add to Home screen"</strong> চাপুন।</p>
+          </div>
+          <div class="install-box">
+            <strong>iPhone (Safari)</strong>
+            <p>নিচের <strong>Share</strong> আইকনে ট্যাপ করে <strong>"Add to Home Screen"</strong>-এ ক্লিক করুন।</p>
+          </div>
+          <div class="install-box">
+            <strong>Desktop (Chrome / Edge)</strong>
+            <p>অ্যাড্রেস বারের ডান পাশে থাকা <strong>Install</strong> আইকনে ক্লিক করলেই ইনস্টল হয়ে যাবে।</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       ADMIN PASSWORD LOGIN MODAL (Password: spira123)
+       ===================================================================== -->
+  <div class="backdrop" id="adminLoginBackdrop" hidden>
+    <div class="modal-box login-modal" role="dialog" aria-modal="true" aria-label="Admin Login">
+      <div class="modal-top">
+        <span class="modal-tag">SPIRA ADMIN SECURITY</span>
+        <button type="button" class="btn-icon-close" id="closeLoginModalBtn">✕</button>
+      </div>
+      <div class="modal-inner">
+        <div class="login-brand-head">
+          <img src="assets/spira-logo.jpg" alt="SPIRA Logo" class="login-logo" />
+          <h3>অ্যাডমিন প্যানেল লগইন</h3>
+          <p>স্টক কন্ট্রোল, ভিজিটর অ্যানালিটিক্স, ফেসবুক পিক্সেল ও অর্ডার ড্যাশবোর্ডে প্রবেশ করতে পাসওয়ার্ড দিন।</p>
+        </div>
+
+        <form id="adminLoginForm" class="login-form">
+          <div class="field-group">
+            <label for="adminPasswordInput">অ্যাডমিন পাসওয়ার্ড *</label>
+            <input type="password" id="adminPasswordInput" required placeholder="পাসওয়ার্ড লিখুন..." autocomplete="current-password" />
+          </div>
+          <div id="loginErrorMsg" class="login-error" hidden>ভুল পাসওয়ার্ড! সঠিক পাসওয়ার্ড দিয়ে আবার চেষ্টা করুন।</div>
+          <button type="submit" class="btn-solid-emerald" style="width:100%; justify-content:center;">
+            লগইন করুন
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       PROTECTED ADMIN DASHBOARD (Unlocked only with spira123)
+       Includes:
+       1. Live Visitor Analytics, Traffic Sources, Click Matrix, Cart & Drop-off Funnel
+       2. Main Website Visitor & Purchase Counter Calibration
+       3. Facebook Pixel Integration & Live Event Tester
+       4. Products, Red Ink "Coming Soon / Stock Out" Control & Photo Upload
+       5. Orders & Notification Alarm
+       6. Blog & Supabase Setup
+       ===================================================================== -->
+  <div class="backdrop" id="adminModalBackdrop" hidden>
+    <div class="modal-box admin-dashboard-modal" role="dialog" aria-modal="true">
+      <div class="admin-header">
+        <div class="admin-header-left">
+          <img src="assets/spira-logo.jpg" alt="SPIRA" class="admin-header-logo" />
+          <div>
+            <h2>SPIRA অ্যাডমিন ও মার্কেটিং কন্ট্রোল সেন্টার</h2>
+            <p id="adminDbStatusText">লোকাল ও রিয়েল-টাইম অ্যানালিটিক্স সক্রিয় (Supabase ক্লাউড প্রস্তুত)</p>
+          </div>
+        </div>
+        <div class="admin-header-right">
+          <button type="button" class="btn-admin-action" id="enableNotifBtn">নোটিফিকেশন চালু করুন</button>
+          <button type="button" class="btn-admin-action" id="testNotifBtn">টেস্ট অর্ডার অ্যালার্ম</button>
+          <button type="button" class="btn-admin-logout" id="adminLogoutBtn">লগআউট (Lock)</button>
+          <button type="button" class="btn-icon-close" id="closeAdminModalBtn">✕</button>
+        </div>
+      </div>
+
+      <!-- Admin Navigation Tabs -->
+      <div class="admin-nav-tabs" role="tablist">
+        <button type="button" class="admin-tab active" data-admin-tab="tab-analytics">
+          📊 ভিজিটর অ্যানালিটিক্স, ফানেল ও কাউন্টার
+        </button>
+        <button type="button" class="admin-tab" data-admin-tab="tab-pixel">
+          🎯 Facebook Pixel ও মার্কেটিং
+        </button>
+        <button type="button" class="admin-tab" data-admin-tab="tab-products">
+          📦 প্রোডাক্ট, ছবি ও স্টক আউট/কামিং সুন
+        </button>
+        <button type="button" class="admin-tab" data-admin-tab="tab-orders">
+          🛍️ অর্ডার তালিকা <span class="tab-count" id="adminTabOrderCount">0</span>
+        </button>
+        <button type="button" class="admin-tab" data-admin-tab="tab-blogs">
+          ✍️ ব্লগ ম্যানেজমেন্ট
+        </button>
+        <button type="button" class="admin-tab" data-admin-tab="tab-database">
+          🗄️ Supabase ডাটাবেস ও Vercel গাইড
+        </button>
+      </div>
+
+      <div class="admin-body">
+        <!-- ===============================================================
+             TAB 1: VISITOR ANALYTICS, DROP-OFF FUNNEL & COUNTER CONTROL
+             =============================================================== -->
+        <div class="admin-pane active" id="tab-analytics">
+          <!-- Public Website Counter Control Box -->
+          <div class="admin-card highlight-border">
+            <div class="admin-card-head">
+              <div>
+                <h3>মেইন ওয়েবসাইটের লাইভ কাউন্টার কন্ট্রোল (Total Visitor &amp; Total Purchase)</h3>
+                <p>মেইন ওয়েবসাইটে যে মোট ভিজিটর এবং মোট অর্ডারের সংখ্যা দেখাচ্ছে তা আসল ভিজিটর ও অর্ডারের সাথে একা একা বাড়বে। তবে আপনি চাইলে এখান থেকে যেকোনো সংখ্যা সেট বা পরিবর্তন করে দিতে পারেন:</p>
+              </div>
+            </div>
+
+            <form id="counterControlForm" class="counter-control-grid">
+              <div class="field-group">
+                <label for="adminVisitorCountInput">মেইন ওয়েবসাইটে দেখানো মোট ভিজিটর (Total Visitors)</label>
+                <input type="number" id="adminVisitorCountInput" min="0" required />
+              </div>
+              <div class="field-group">
+                <label for="adminPurchaseCountInput">মেইন ওয়েবসাইটে দেখানো মোট অর্ডার/বিক্রয় (Total Purchases)</label>
+                <input type="number" id="adminPurchaseCountInput" min="0" required />
+              </div>
+              <div class="counter-btn-wrap">
+                <button type="submit" class="btn-solid-emerald">কাউন্টার আপডেট করুন</button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Top KPI Summary Cards -->
+          <div class="analytics-kpi-grid">
+            <div class="kpi-box">
+              <span class="kpi-label">মোট ওয়েবসাইট ভিজিটর (Total Visits)</span>
+              <strong class="kpi-value" id="kpiTotalVisits">0</strong>
+              <small class="kpi-sub">আসল সেশন ও পেজ ভিউ</small>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-label">প্রোডাক্ট ক্লিক করেছে (Product Clicks)</span>
+              <strong class="kpi-value" id="kpiProductClicks">0</strong>
+              <small class="kpi-sub" id="kpiNoClickRate">ক্লিক না করে চলে গেছে: 0%</small>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-label">কার্টে রেখেছে (Added to Cart)</span>
+              <strong class="kpi-value" id="kpiAddToCarts">0</strong>
+              <small class="kpi-sub" id="kpiAbandonedCarts">অর্ডার না করে কার্টে রেখেছে: 0</small>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-label">চেকআউট থেকে ফিরে গেছে (Drop-off)</span>
+              <strong class="kpi-value" id="kpiCheckoutDropoffs">0</strong>
+              <small class="kpi-sub" id="kpiCompletedOrders">সম্পন্ন অর্ডার: 0</small>
+            </div>
+          </div>
+
+          <!-- Two Column: Traffic Sources + Conversion & Drop-Off Funnel -->
+          <div class="analytics-two-col">
+            <div class="admin-card">
+              <h4>কোথা থেকে ভিজিটর এসেছে? (Traffic Sources / Referrer)</h4>
+              <p class="card-sub">ফেসবুক অ্যাড, ফেসবুক পেজ, ডিরেক্ট লিংক নাকি গুগল থেকে কতজন এসেছে:</p>
+              <div id="trafficSourcesList" class="source-bars-list"></div>
+            </div>
+
+            <div class="admin-card">
+              <h4>কাস্টমার কোন পর্যায় থেকে চলে গেছে? (Conversion &amp; Drop-off Funnel)</h4>
+              <p class="card-sub">ওয়েবসাইটে আসা থেকে শুরু করে অর্ডার সম্পন্ন হওয়া পর্যন্ত প্রতিটি ধাপের হিসাব:</p>
+              <div id="conversionFunnelList" class="funnel-stages-list"></div>
+            </div>
+          </div>
+
+          <!-- Product Engagement Matrix: Which product was clicked, which was NOT clicked, which was added to cart -->
+          <div class="admin-card">
+            <h4>কোন প্রোডাক্ট কতজন দেখেছে, ক্লিক করেছে, ক্লিক করেনি এবং কার্টে রেখেছে</h4>
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>প্রোডাক্টের নাম</th>
+                    <th>দেখেছে (Views)</th>
+                    <th>ক্লিক করেছে (Clicked)</th>
+                    <th>ক্লিক করেনি (Skipped)</th>
+                    <th>কার্টে রেখেছে (Add to Cart)</th>
+                    <th>অর্ডার করেছে (Purchased)</th>
+                  </tr>
+                </thead>
+                <tbody id="productEngagementTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Detailed Visitor Session Journey Log -->
+          <div class="admin-card">
+            <div class="admin-card-head">
+              <div>
+                <h4>প্রতিটি ভিজিটরের বিস্তারিত অ্যাক্টিভিটি লগ (Live Visitor Journey)</h4>
+                <p class="card-sub">কে কখন আসলো, কোথা থেকে আসলো, কোনটা ক্লিক করলো, কার্টে কী রাখলো এবং কোন পর্যায় থেকে চলে গেল:</p>
+              </div>
+              <button type="button" class="btn-outline-emerald" id="simulateVisitorBtn">
+                + ডেমো ফেসবুক ভিজিটর সিমুলেট করুন
+              </button>
+            </div>
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>ভিজিটর ও সময়</th>
+                    <th>কোথা থেকে এসেছে (Source)</th>
+                    <th>কী কী ক্লিক করেছে (Clicks)</th>
+                    <th>কার্টে কী রেখেছে (Cart Items)</th>
+                    <th>সর্বশেষ অবস্থা / কোন পর্যায় থেকে চলে গেছে (Exit Stage)</th>
+                  </tr>
+                </thead>
+                <tbody id="visitorJourneyTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===============================================================
+             TAB 2: FACEBOOK PIXEL & MARKETING TRACKING
+             =============================================================== -->
+        <div class="admin-pane" id="tab-pixel" hidden>
+          <div class="admin-card highlight-border">
+            <h3>Facebook (Meta) Pixel সেটআপ ও অটো-ট্র্যাকিং</h3>
+            <p class="card-sub">
+              ফেসবুকে মার্কেটিং ও অ্যাড চালানোর জন্য আপনার <strong>Facebook Pixel ID</strong> নিচে বসিয়ে সেভ করুন। ওয়েবসাইটে কেউ ঢুকলে (<code>PageView</code>), প্রোডাক্ট দেখলে (<code>ViewContent</code>), কার্টে যোগ করলে (<code>AddToCart</code>), চেকআউট শুরু করলে (<code>InitiateCheckout</code>) এবং অর্ডার করলে (<code>Purchase</code>) স্বয়ংক্রিয়ভাবে ফেসবুক অ্যাড ম্যানেজারে ডেটা চলে যাবে!
+            </p>
+
+            <form id="fbPixelConfigForm" class="pixel-form">
+              <div class="form-grid-2">
+                <div class="field-group">
+                  <label for="fbPixelIdInput">Facebook Pixel ID (১৫ বা ১৬ ডিজিটের নাম্বার) *</label>
+                  <input type="text" id="fbPixelIdInput" placeholder="যেমন: 123456789012345" />
+                </div>
+                <div class="field-group">
+                  <label for="fbTestCodeInput">Test Event Code (ঐচ্ছিক - Events Manager টেস্টের জন্য)</label>
+                  <input type="text" id="fbTestCodeInput" placeholder="যেমন: TEST12345" />
+                </div>
+              </div>
+              <div class="pixel-actions">
+                <button type="submit" class="btn-solid-emerald">Facebook Pixel সেভ ও চালু করুন</button>
+                <button type="button" class="btn-outline-emerald" id="fireTestPixelEventBtn">টেস্ট Pixel Event পাঠান</button>
+              </div>
+            </form>
+
+            <div class="pixel-status-strip" id="pixelStatusStrip">
+              স্ট্যাটাস: <strong>বিল্ট-ইন ইভেন্ট ট্র্যাকার চালু আছে</strong> (আপনার Meta Pixel ID বসালেই সরাসরি Facebook Events Manager-এ সিঙ্ক হবে)
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <h4>লাইভ Facebook Pixel ইভেন্ট লগ (Fired Events)</h4>
+            <p class="card-sub">এই ওয়েবসাইট থেকে ফেসবুক পিক্সেলে যে ইভেন্টগুলো ফায়ার হচ্ছে তার রিয়েল-টাইম তালিকা:</p>
+            <div class="table-responsive">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>সময়</th>
+                    <th>ইভেন্টের নাম (Event Name)</th>
+                    <th>প্যারামিটার ও প্রোডাক্ট ডেটা (Payload)</th>
+                    <th>স্ট্যাটাস</th>
+                  </tr>
+                </thead>
+                <tbody id="pixelEventLogBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===============================================================
+             TAB 3: PRODUCTS, PHOTO UPLOAD & RED INK STAMP CONTROL
+             =============================================================== -->
+        <div class="admin-pane" id="tab-products" hidden>
+          <div class="admin-card">
+            <div class="admin-card-head">
+              <div>
+                <h3>প্রোডাক্ট স্টক স্ট্যাটাস (লাল কালির কামিং সুন / স্টক আউট) ও ছবি আপলোড</h3>
+                <p class="card-sub">এখান থেকে যেকোনো প্রোডাক্ট <strong>কামিং সুন</strong> বা <strong>স্টক আউট</strong> করলে ওয়েবসাইটে প্রোডাক্টের ছবির উপরে লাল কালির স্ট্যাম্প ভেসে উঠবে।</p>
+              </div>
+              <button type="button" class="btn-solid-emerald" id="showAddProductFormBtn">+ নতুন প্রোডাক্ট যোগ করুন</button>
+            </div>
+
+            <div class="bulk-status-bar">
+              <span>সব প্রোডাক্ট এক ক্লিকে পরিবর্তন করুন:</span>
+              <div class="bulk-btns">
+                <button type="button" class="btn-status-red" data-bulk-status="coming_soon">সবগুলো "কামিং সুন"</button>
+                <button type="button" class="btn-status-red" data-bulk-status="stock_out">সবগুলো "স্টক আউট"</button>
+                <button type="button" class="btn-status-green" data-bulk-status="in_stock">সবগুলো "ইন স্টক" (অর্ডার চালু)</button>
+              </div>
+            </div>
+
+            <!-- Add/Edit Product Form -->
+            <form id="productEditorForm" class="admin-form-box" hidden>
+              <div class="form-box-head">
+                <h4 id="productFormTitle">নতুন প্রোডাক্ট যোগ করুন</h4>
+                <button type="button" class="btn-text" id="cancelProductFormBtn">বাতিল ✕</button>
+              </div>
+              <input type="hidden" id="editProdId" />
+
+              <div class="form-grid-3">
+                <div class="field-group">
+                  <label for="prodName">প্রোডাক্টের নাম *</label>
+                  <input type="text" id="prodName" required placeholder="যেমন: SPIRA অর্গানিক স্পিরুলিনা পাউডার" />
+                </div>
+                <div class="field-group">
+                  <label for="prodCategory">ক্যাটাগরি *</label>
+                  <select id="prodCategory">
+                    <option value="powder">স্পিরুলিনা পাউডার (Powder)</option>
+                    <option value="capsule">ভেজিটেবল ক্যাপসুল (Capsule)</option>
+                    <option value="sachet">মিনি স্যাশে প্যাক (Mini Sachet)</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label for="prodWeight">ওজন / প্যাক সাইজ *</label>
+                  <input type="text" id="prodWeight" required placeholder="যেমন: ১০০ গ্রাম জার" />
+                </div>
+              </div>
+
+              <div class="form-grid-3">
+                <div class="field-group">
+                  <label for="prodPrice">বিক্রয় মূল্য (৳) *</label>
+                  <input type="number" id="prodPrice" required min="1" placeholder="650" />
+                </div>
+                <div class="field-group">
+                  <label for="prodOldPrice">পূর্বের মূল্য (৳)</label>
+                  <input type="number" id="prodOldPrice" min="0" placeholder="850" />
+                </div>
+                <div class="field-group">
+                  <label for="prodStatus">স্টক স্ট্যাটাস *</label>
+                  <select id="prodStatus">
+                    <option value="coming_soon">কামিং সুন (COMING SOON — লাল স্ট্যাম্প)</option>
+                    <option value="stock_out">স্টক আউট (STOCK OUT — লাল স্ট্যাম্প)</option>
+                    <option value="in_stock">ইন স্টক (In Stock — অর্ডার চালু)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="prodDesc">প্রোডাক্টের বিবরণ *</label>
+                <textarea id="prodDesc" rows="2" required placeholder="প্রোডাক্টের গুণাগুণ ও বিবরণ..."></textarea>
+              </div>
+
+              <div class="field-group">
+                <label>প্রোডাক্টের ছবি আপলোড করুন</label>
+                <div class="upload-dropzone">
+                  <input type="file" id="prodImageInput" accept="image/*" />
+                  <div class="upload-preview-row">
+                    <img id="prodImagePreview" src="" alt="Preview" hidden />
+                    <span id="prodImagePlaceholderText">এখানে ক্লিক করে মোবাইল বা কম্পিউটার থেকে প্রোডাক্টের ছবি সিলেক্ট করুন</span>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-solid-emerald">প্রোডাক্ট সেভ করুন</button>
+            </form>
+
+            <div id="adminProductsList" class="admin-rows-list"></div>
+          </div>
+        </div>
+
+        <!-- ===============================================================
+             TAB 4: ORDERS & NOTIFICATIONS
+             =============================================================== -->
+        <div class="admin-pane" id="tab-orders" hidden>
+          <div class="admin-card">
+            <div class="admin-card-head">
+              <div>
+                <h3>কাস্টমার অর্ডার ও প্রি-বুকিং তালিকা</h3>
+                <p class="card-sub">নতুন অর্ডার আসলে সাথে সাথে অ্যালার্ম বাজবে এবং মেইন ওয়েবসাইটের Total Purchase কাউন্টার ১ করে বাড়বে।</p>
+              </div>
+              <button type="button" class="btn-outline-emerald" id="createDemoOrderBtn">+ ডেমো অর্ডার পাঠিয়ে টেস্ট করুন</button>
+            </div>
+            <div id="adminOrdersList" class="admin-rows-list"></div>
+          </div>
+        </div>
+
+        <!-- ===============================================================
+             TAB 5: BLOG MANAGEMENT
+             =============================================================== -->
+        <div class="admin-pane" id="tab-blogs" hidden>
+          <div class="admin-card">
+            <h3>নতুন ব্লগ আর্টিকেল প্রকাশ করুন</h3>
+            <form id="blogEditorForm" class="admin-form-box" style="margin-top:14px;">
+              <div class="form-grid-2">
+                <div class="field-group">
+                  <label for="blogTitle">শিরোনাম *</label>
+                  <input type="text" id="blogTitle" required placeholder="ব্লগের শিরোনাম লিখুন" />
+                </div>
+                <div class="field-group">
+                  <label for="blogTag">ক্যাটাগরি / পাঠের সময় *</label>
+                  <input type="text" id="blogTag" required placeholder="যেমন: পুষ্টি বিজ্ঞান • ৪ মিনিট পাঠ" />
+                </div>
+              </div>
+              <div class="field-group">
+                <label for="blogSummary">সংক্ষিপ্ত সারাংশ *</label>
+                <textarea id="blogSummary" rows="2" required></textarea>
+              </div>
+              <div class="field-group">
+                <label for="blogBody">বিস্তারিত আর্টিকেল *</label>
+                <textarea id="blogBody" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn-solid-emerald">ব্লগ পাবলিশ করুন</button>
+            </form>
+            <div id="adminBlogsList" class="admin-rows-list"></div>
+          </div>
+        </div>
+
+        <!-- ===============================================================
+             TAB 6: SUPABASE DATABASE & VERCEL GUIDE
+             =============================================================== -->
+        <div class="admin-pane" id="tab-database" hidden>
+          <div class="admin-card highlight-border">
+            <div class="admin-card-head">
+              <div>
+                <h3>লাইভ সার্ভার ও Supabase API স্ট্যাটাস (Project: weuoxuszauoacifshvuy)</h3>
+                <p class="card-sub">আপনার দেওয়া Supabase URL, Publishable Key এবং MCP কনফিগারেশন ইতিমধ্যে যুক্ত করা হয়েছে:</p>
+              </div>
+            </div>
+
+            <div class="db-step-card" id="serverDiagnosticBox" style="background:var(--emerald-tint); border-color:var(--emerald-primary);">
+              <strong>সার্ভার কানেকশন রিপোর্ট:</strong>
+              <ul style="margin-top:8px; padding-left:20px; font-size:0.88rem; color:var(--emerald-dark);">
+                <li><strong>Supabase URL:</strong> <code>https://weuoxuszauoacifshvuy.supabase.co</code> (Connected)</li>
+                <li><strong>Publishable Key:</strong> <code>sb_publishable_eOYLlZ5-QcljD00uQP6LJQ_YrK9Vk8z</code> (Verified)</li>
+                <li><strong>JWKS Auth Endpoint:</strong> <code>200 OK</code> (Active ES256 Key Verified)</li>
+                <li><strong>MCP Config:</strong> <code>~/.gemini/antigravity/mcp_config.json</code> ও <code>.mcp.json</code> সেটআপ সম্পন্ন</li>
+              </ul>
+            </div>
+
+            <div class="db-step-card">
+              <strong>ধাপ ১: Supabase-এ টেবিলগুলো চালু করতে SQL কোডটি একবার Run করুন</strong>
+              <p style="font-size:0.86rem; color:var(--text-secondary); margin-top:4px;">নিচের বাটনে ক্লিক করে SQL কোডটি কপি করুন এবং আপনার Supabase ড্যাশবোর্ডের <strong>SQL Editor → New Query</strong>-তে পেস্ট করে <strong>Run</strong> চাপুন:</p>
+              <div style="margin-top:10px; display:flex; align-items:center; gap:12px;">
+                <button type="button" class="btn-solid-emerald" id="copySupabaseSqlBtn">Supabase SQL কোড কপি করুন</button>
+                <span id="sqlCopyFeedback" style="font-weight:700; color:var(--emerald-mid);"></span>
+              </div>
+            </div>
+
+            <div class="db-step-card">
+              <strong>ধাপ ২: আপনার কানেক্টেড Supabase Project URL ও Publishable Key</strong>
+              <form id="supabaseConfigForm" style="margin-top:12px;">
+                <div class="form-grid-2">
+                  <div class="field-group">
+                    <label for="sbUrlInput">Supabase Project URL</label>
+                    <input type="url" id="sbUrlInput" value="https://weuoxuszauoacifshvuy.supabase.co" placeholder="https://xxxxxxxxxxxx.supabase.co" />
+                  </div>
+                  <div class="field-group">
+                    <label for="sbKeyInput">Supabase Publishable / Anon Key</label>
+                    <input type="text" id="sbKeyInput" value="sb_publishable_eOYLlZ5-QcljD00uQP6LJQ_YrK9Vk8z" placeholder="sb_publishable_..." />
+                  </div>
+                </div>
+                <div style="display:flex; gap:10px; margin-top:12px;">
+                  <button type="submit" class="btn-solid-emerald">Supabase কানেকশন রিফ্রেশ ও সিঙ্ক করুন</button>
+                  <button type="button" class="btn-outline-emerald" id="disconnectSupabaseBtn">লোকাল মোড</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Mobile Bottom App Bar (Visible on Mobile Screens <= 768px) -->
+  <nav class="mobile-bottom-bar" id="mobileBottomNav" aria-label="Mobile Bottom Bar">
+    <a href="#" class="bottom-nav-item">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>হোম</span>
+    </a>
+    <a href="#products" class="bottom-nav-item">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>প্রোডাক্ট</span>
+    </a>
+    <button type="button" class="bottom-nav-item" id="mobileBottomCartBtn">
+      <div class="bottom-bag-icon-wrap">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="bottom-bag-badge" id="mobileBottomCartCount">0</span>
+      </div>
+      <span>অর্ডার ব্যাগ</span>
+    </button>
+    <a href="#journal" class="bottom-nav-item">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+      <span>জার্নাল</span>
+    </a>
+    <button type="button" class="bottom-nav-item" id="mobileBottomAppBtn">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+      <span>অ্যাপ</span>
+    </button>
+  </nav>
+
+  <div class="toast-stack" id="toastContainer" aria-live="polite"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

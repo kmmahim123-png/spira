@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="30%" cy="25%" r="80%">
+      <stop offset="0%" stop-color="#115E40"/>
+      <stop offset="60%" stop-color="#083B27"/>
+      <stop offset="100%" stop-color="#042216"/>
+    </radialGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E6C677"/>
+      <stop offset="50%" stop-color="#C59B43"/>
+      <stop offset="100%" stop-color="#9A7324"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D4F35"/>
+      <stop offset="100%" stop-color="#228B5D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App Icon Rounded Background -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect x="16" y="16" width="480" height="480" rx="98" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-opacity="0.35"/>
+
+  <!-- SPIRA Emblem (Inspired by Official Facebook Page Logo) -->
+  <g transform="translate(0, -18)">
+    <!-- Rising Spirulina S-Helix / Vitality Wave -->
+    <path d="M256 76 C235 96, 224 114, 248 128 C275 144, 278 164, 242 182 C202 202, 206 226, 252 242 C288 254, 294 274, 260 294" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="11" stroke-linecap="round"/>
+    
+    <!-- Top & Mid Vitality Dots -->
+    <circle cx="242" cy="110" r="7" fill="#E6C677"/>
+    <circle cx="252" cy="212" r="11" fill="#E6C677"/>
+
+    <!-- Stylized Leaf / Wave Bowl Base -->
+    <path d="M168 292 C168 352, 226 386, 288 370 C332 358, 356 318, 352 272 C332 308, 292 320, 262 306 C230 292, 204 260, 168 292 Z" 
+          fill="url(#leafGrad)" stroke="url(#goldGrad)" stroke-width="8" stroke-linejoin="round"/>
+    
+    <!-- Inner Gold Leaf Veins -->
+    <path d="M188 310 C222 342, 278 352, 330 314" fill="none" stroke="url(#goldGrad)" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M208 332 C242 356, 286 358, 322 332" fill="none" stroke="url(#goldGrad)" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- SPIRA Serif Wordmark -->
+  <text x="256" y="424" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="bold" letter-spacing="8" fill="#F6F4EE">SPIRA</text>
+  <text x="256" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="5.5" fill="#D4AF5A">PURE • SUPERFOOD</text>
+</svg>
